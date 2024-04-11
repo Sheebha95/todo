@@ -7,7 +7,7 @@ import axios from "axios";
 
 const App = async () => {
   try{ 
-  const response = await axios.post("https://localhost:5000/todos", todo);
+  const response = await axios.post("https://localhost:5000/todo", todo);
   console.log("response", response.data);
   setTodos(response.data);
 } catch (error){
@@ -29,7 +29,7 @@ const App = async () => {
 
   const fetchTodo = async () => {
     try {
-    const response = await axios.get("http://localhost:5000/todos");
+    const response = await axios.get("http://localhost:5000/todos", todo);
     console.log("Response", response.data);
     setTodos(response.data);
   } catch (error){
