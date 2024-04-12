@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import axios from "axios";
 
 
-const App = async () => {
+const App = async (todo) => {
   try{ 
   const response = await axios.post("https://localhost:5000/todo", todo);
   console.log("response", response.data);
